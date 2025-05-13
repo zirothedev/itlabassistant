@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITLabAssistant</title>
+    <link rel="preconnect" href="https://fonts..googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type=text/css href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <nav>
+        <a href="" class="logo">
+            <h2>IT<span>LabAssistant</span></h2>
+        </a>
+        <div class="links">
+            <a href="">Home</a>
+            <!-- <a href="#">About</a> -->
+            <a href="#activities">Activities</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="login">
+            <a href="signup"><button class="signup">Get Started</button></a>
+            <a href="login"><button>Login</button></a>
+        </div>
+    </nav>
+
+    <header>
+        <div class="left">
+            <h1>Welcome to ITLabAssistant!</h1>
+            <p>This web app is designed to help you with your technical needs.Think of it like having a personal lab assistant at your fingertips.</p>
+            <a href="#Troubleshooting"><button class="a">Troubleshooting</button></a>
+            <a href="#resources"><button class="a">Resources</button></a>
+            <a href="#new"><button class="a">Registration</button></a>
+            <a href="#contact"><button class="a">Contact</button></a>
+        </div>
+    </header>
+
+    <h3 class="seperator" id="activities">
+        Activities
+    </h3>
+    <div class="activity" id="Troubleshooting">  
+        <h4>Troubleshooting <span>(Software Installation)</span></h4>
+        <p>This includes the step by step guide you need to successfully run software installations.
+             <br> PS: You must use the softwares provided from the lab.</p>
+    </div>
+    <div class="activities">
+        <div class="msoffice">
+            <div class="header">
+                <img src="https://i.imgur.com/u7opoNx.jpeg"  class="img-fluid">
+                <p>MS OFFICES(1)</p>
+            </div>
+        </div>
+        <div class="msoffice">
+            <div class="header">
+                <img src="https://i.imgur.com/Y6USHU8.jpeg"  class="img-fluid">
+                <p>MS OFFICES(2)</p>
+            </div>
+        </div>
+        <div class="msoffice">
+            <div class="header">
+                <img src="https://i.imgur.com/Nu2rjGH.jpeg"  class="img-fluid">
+                <p>MS OFFICES(3)</p>
+            </div>
+        </div>
+    </div>
+    <div class="activities2 activities">
+        <div class="activation">
+            <div class="header">
+                <img src="https://i.imgur.com/9zOiVCF.jpeg"  class="img-fluid">
+                <p>ACTIVATION(1)</p>
+            </div>
+        </div>
+        <div class="activation">
+            <div class="header">
+                <img src="https://i.imgur.com/rqMmSWP.jpeg"  class="img-fluid">
+                <p>ACTIVATION(2)</p>
+            </div>
+        </div>
+        <div class="activation">
+            <div class="header">
+                <img src="https://i.imgur.com/AkU4gv0.jpeg"  class="img-fluid">
+                <p>ACTIVATION(3)</p>
+            </div>
+        </div>
+    </div>
+    <h3 class="seperator" id="resources">
+        Resources
+    </h3>
+    <div class="container">
+        <div class="resources" id="new">
+            <h5>Looking for helpful resources to study with? </h5>
+            <p>Here are some useful links that would come in handy.
+            <a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer"><button>w3schools</button></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><button>YouTube</button></a>
+            <a href="https://www.openai.com" target="_blank" rel="noopener noreferrer"><button>ChatGpt</button></a>
+            <a href="https://www.scikitlearn.com" target="_blank" rel="noopener noreferrer"><button>ScikitLearn</button></a>
+            <h6>New Student Registration?</h6>
+            <a href="https://myit.epizy.com" target="_blank" rel="noopener noreferrer"><button>Click Here!</button></a>
+        </div>
+    </div>
+    <h3 class="seperator" id="contact">
+        Contact
+    </h3>
+    <div class="container">
+        <div class="contact">
+            <h3>For any problems acquired do well to reach out to following contact lines below.</h3>
+            <h4>Malam Yahaya</h4>
+            <p>+234 123 456 789</p>
+            <p>yajfatechzone@gmail.com</p>
+            <h4>Salahudeen Yahaya</h4>
+            <p>+234 123 456 789</p>
+            <p>yajfatechzone@gmail.com</p>
+        </div>
+    </div>
+    <footer>
+        <h3>Your guide to stress free and seamless experience in the lab.</h3>
+        <div class="rights">
+            <div class="links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cooperation</a>
+                <a href="#">Sponsorship</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <p>Copyright @2025, All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
