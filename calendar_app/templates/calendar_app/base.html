@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Calendar App{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'calendar_app/css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Calendar</h1>
+        </header>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        <footer>
+            <p>&copy; {% now "Y" %} - Minimalist Calendar App</p>
+        </footer>
+    </div>
+    <script src="{% static 'calendar_app/js/script.js' %}"></script>
+</body>
+</html>

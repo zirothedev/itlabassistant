@@ -1,0 +1,18 @@
+{% extends 'calendar_app/base.html' %}
+{% load static %}
+
+{% block title %}Calendar{% endblock %}
+
+{% block content %}
+<div class="calendar-container">
+    <div class="calendar-nav">
+        <a href="{% url 'calendar_app:calendar' %}?month={{ prev_month }}" class="btn">&lt; Previous</a>
+        <a href="{% url 'calendar_app:calendar' %}" class="btn">Today</a>
+        <a href="{% url 'calendar_app:calendar' %}?month={{ next_month }}" class="btn">Next &gt;</a>
+    </div>
+    
+    <div class="calendar-wrapper">
+        {{ calendar }}
+    </div>
+</div>
+{% endblock %}

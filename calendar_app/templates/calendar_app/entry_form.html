@@ -1,0 +1,22 @@
+{% extends 'calendar_app/base.html' %}
+
+{% block title %}
+{% if object %}Edit Entry{% else %}New Entry{% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>{% if object %}Edit Entry{% else %}New Entry{% endif %}</h2>
+    
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-fields">
+            {{ form.as_p }}
+        </div>
+        <div class="form-actions">
+            <button type="submit" class="btn primary">Save</button>
+            <a href="{% url 'calendar_app:calendar' %}" class="btn">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

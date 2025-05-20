@@ -1,0 +1,37 @@
+{% extends 'calendar_app/base.html' %}
+
+{% block title %}{{ object.title }}{% endblock %}
+
+{% block content %}
+<div class="entry-detail">
+    <h2>{{ object.title }}</h2>
+    
+    <div class="entry-meta">
+        <span class="entry-type {{ object.entry_type|lower }}">{{ object.entry_type }}</span>
+        <span class="entry-date">{{ object.date }}</span>
+        {% if object.entry_type == 'TODO' %}
+        <span class="entry-status {% if object.completed %}completed{% endif %}">
+            {% if object.completed %}Completed{% else %}Pending{% endif %}
+        </span>
+        {% endif %}
+    </div>
+    
+    <div class="entry-description">
+        <p>{{ object.description|linebreaks }}</p>
+    </div>
+    
+    <div class="entry-actions">
+        {% if object.entry_type == 'TODO' %}
+        <form method="post" action="{% url 'calendar_app:toggle_completed' object.id %}">
+            {% csrf_token %}
+            <button type="submit" class="btn toggle">
+                {% if object.completed %}Mark as Pending{% else %}Mark as Completed{% endif %}
+            </button>
+        </form>
+        {% endif %}
+        <a href="{% url 'calendar_app:entry_update' object.id %}" class="btn">Edit</a>
+        <a href="{% url 'calendar_app:entry_delete' object.id %}" class="btn danger">Delete</a>
+        <a href="{% url 'calendar_app:calendar' %}" class="btn">Back to Calendar</a>
+    </div>
+</div>
+{% endblock %}
