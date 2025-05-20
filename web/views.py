@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 from web import models
 from web.models import Itlab
 from django.contrib.auth import authenticate, login
+from calendar_app.views import Calendar
+import datetime
 
 
 # Create your views here.
@@ -35,3 +37,4 @@ def login_view(request):
 
 def base(request):
     return render(request, 'base.html')
+

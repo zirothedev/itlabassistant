@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-@wur5gh)fuk(daq(*!il^3cd^s9ig$ur4a!hoslc%ca*7ew2#3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['itlabassistant.onrender.com']
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'web',
+    'calendar_app',
 ]
 
 MIDDLEWARE = [
